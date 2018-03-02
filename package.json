@@ -1,0 +1,25 @@
+{
+  "name": "socketsdemo",
+  "version": "1.0.0",
+  "description": "A simple app to demonstrate working of web sockets",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnirudhGoel/socketsDemo.git"
+  },
+  "author": "Anirudh Goel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnirudhGoel/socketsDemo/issues"
+  },
+  "homepage": "https://github.com/AnirudhGoel/socketsDemo#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "ws": "^4.1.0"
+  },
+  "devDependencies": {}
+}
