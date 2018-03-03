@@ -19,4 +19,8 @@ wss.on('connection', function connection(ws) {
 			});
 		}
 	});
+
+	ws.on('error', function(e) {
+		console.log("Disconnected");
+	})
 });
