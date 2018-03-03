@@ -12,33 +12,18 @@
 
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600|Lato:300,400" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/display.css">
 	</head>
 
 	<body>
 		<div class="container">
-			<h1>Sell Products</h1>
-			
+			<h1>Buy Products</h1>
+			<br><br>
+			<div id="prodArea"></div>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-		<script>
-			var websocket = new WebSocket("ws://localhost:3000");
-
-			websocket.onerror = function(error) {
-				console.error('WebSocket Error ' + error);
-			};
-
-
-			websocket.onopen = function() {
-				websocket.send('Client 1 connected');
-			};
-
-			websocket.onmessage = function incoming(data) {
-				console.log(data);
-			};
-		</script>
+		<script src="js/display.js"></script>
 	</body>
 </html>

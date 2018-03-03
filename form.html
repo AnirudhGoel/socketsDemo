@@ -12,7 +12,7 @@
 
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600|Lato:300,400" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/form.css">
 	</head>
 
 	<body>
@@ -26,8 +26,8 @@
 				Price:
 				<input type="text" id="price">
 				<br><br>
-				Date of Manufacture:
-				<input type="text" id="dom">
+				Validity:
+				<input type="text" id="validity"> Months
 				<br><br>
 				<input type="submit">
 			</form>
@@ -35,33 +35,6 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-		<script>
-			var websocket = new WebSocket("ws://localhost:3000");
-
-			websocket.onerror = function(error) {
-				console.error('WebSocket Error ' + error);
-			};
-
-
-			websocket.onopen = function() {
-				websocket.send('Client 1 connected');
-			};
-
-			$("form").submit(function(event) {
-				event.preventDefault();
-
-				var name = $("#name").val();
-				var price = $("#price").val();
-				var dom = $("#dom").val();
-
-				console.log(name, price, dom);
-
-				websocket.send(JSON.stringify({
-					id: "client1",
-					data: "hello"
-				}));
-			});
-		</script>
+		<script src="js/form.js"></script>
 	</body>
 </html>
